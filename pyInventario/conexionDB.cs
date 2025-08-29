@@ -19,7 +19,8 @@ namespace pyInventario
 
         public conexionBD()
         {
-            cadena = @"Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\\Users\\mbord\\Desktop\\pyInventario\\pyInventario\\bin\\Debug\\dbProducts.mdb;";
+            cadena = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\Escritorio\DESAFIO\pryInventarioBordon-master\pyInventario\baseDeDatos\Productos.accdb";
+
         }
 
         public void mostrarProductos(DataGridView dgvProductos)
