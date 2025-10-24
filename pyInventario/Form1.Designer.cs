@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Acciones;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,20 +47,80 @@
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnMostrar = new System.Windows.Forms.Button();
             Acciones = new System.Windows.Forms.GroupBox();
+            Acciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            Acciones.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Acciones
+            // 
+            Acciones.Controls.Add(this.btnMostrar);
+            Acciones.Controls.Add(this.btnAgregar);
+            Acciones.Controls.Add(this.btnEliminar);
+            Acciones.Controls.Add(this.btnModificar);
+            Acciones.Location = new System.Drawing.Point(107, 382);
+            Acciones.Name = "Acciones";
+            Acciones.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            Acciones.Size = new System.Drawing.Size(449, 62);
+            Acciones.TabIndex = 16;
+            Acciones.TabStop = false;
+            Acciones.Text = "Acciones";
+            Acciones.Enter += new System.EventHandler(this.Acciones_Enter);
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.Color.Coral;
+            this.btnMostrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMostrar.Location = new System.Drawing.Point(357, 19);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(86, 33);
+            this.btnMostrar.TabIndex = 16;
+            this.btnMostrar.Text = "Mostrar todos";
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAgregar.Location = new System.Drawing.Point(4, 17);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(86, 35);
+            this.btnAgregar.TabIndex = 13;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnEliminar.Location = new System.Drawing.Point(246, 18);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(86, 33);
+            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnModificar.Location = new System.Drawing.Point(127, 17);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(86, 34);
+            this.btnModificar.TabIndex = 15;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label1
             // 
@@ -178,57 +243,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Codigo";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnAgregar.Location = new System.Drawing.Point(4, 17);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(86, 35);
-            this.btnAgregar.TabIndex = 13;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.IndianRed;
-            this.btnEliminar.Location = new System.Drawing.Point(246, 18);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 33);
-            this.btnEliminar.TabIndex = 14;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnModificar.Location = new System.Drawing.Point(127, 17);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(86, 34);
-            this.btnModificar.TabIndex = 15;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // Acciones
-            // 
-            Acciones.Controls.Add(this.btnMostrar);
-            Acciones.Controls.Add(this.btnAgregar);
-            Acciones.Controls.Add(this.btnEliminar);
-            Acciones.Controls.Add(this.btnModificar);
-            Acciones.Location = new System.Drawing.Point(107, 382);
-            Acciones.Name = "Acciones";
-            Acciones.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            Acciones.Size = new System.Drawing.Size(449, 62);
-            Acciones.TabIndex = 16;
-            Acciones.TabStop = false;
-            Acciones.Text = "Acciones";
-            Acciones.Enter += new System.EventHandler(this.Acciones_Enter);
-            // 
             // txtBuscarProducto
             // 
             this.txtBuscarProducto.Location = new System.Drawing.Point(326, 22);
@@ -265,19 +279,6 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Introduzca el codigo";
             // 
-            // btnMostrar
-            // 
-            this.btnMostrar.BackColor = System.Drawing.Color.Coral;
-            this.btnMostrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMostrar.Location = new System.Drawing.Point(357, 19);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(86, 33);
-            this.btnMostrar.TabIndex = 16;
-            this.btnMostrar.Text = "Mostrar todos";
-            this.btnMostrar.UseVisualStyleBackColor = false;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,14 +303,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Form1";
             this.Text = "Gestion de inventario";
             this.Load += new System.EventHandler(this.Form1_Load);
+            Acciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            Acciones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
